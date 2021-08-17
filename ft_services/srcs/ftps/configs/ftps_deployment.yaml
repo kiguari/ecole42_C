@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ftps-deployment
+  labels:
+    app: ftps
+    owner: Eshakita
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ftps
+  template:
+    metadata:
+      labels:
+        app: ftps
+        owner: Eshakita
+    spec:
+      containers:
+        - name: ftps
+          image: ftps_image
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 21
+            - containerPort: 20001

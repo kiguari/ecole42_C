@@ -1,0 +1,14 @@
+R 1200 800
+NO ./textures/tex1.xpm         
+SO ./textures/tex2.xpm   
+WE ./textures/redbrick.xpm  
+EA ./textures/tex3.xpm    
+S ./textures/barrel.xpm
+F 220,100,111
+C 225,111,111
+
+111111
+100101
+102001
+1100N1
+111111

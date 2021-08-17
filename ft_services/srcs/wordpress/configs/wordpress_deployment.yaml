@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress-deployment
+  labels:
+    app: wordpress
+    owner: Eshakita
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wordpress
+  template:
+    metadata:
+      labels:
+        app: wordpress
+        owner: Eshakita
+    spec:
+      containers:
+      - name: wordpress
+        image: wordpress_image
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5050

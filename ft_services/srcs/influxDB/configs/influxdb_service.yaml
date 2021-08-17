@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: influxdb-service
+  labels:
+      app  : influxdb
+      owner: Eshakita
+spec:
+  type: ClusterIP
+  selector:
+    app: influxdb
+  ports:
+  - name: http
+    port: 8086
+    targetPort: 8086

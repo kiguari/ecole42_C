@@ -1,0 +1,55 @@
+________________________________________________________________________
+DOCKER
+docker stop $(docker ps -a -q) -- остановить все контейнеры
+docker rm $(docker ps -a -q)  -- удалить все докер контейнеры
+docker rmi $(docker images -q) -- удалить все докер имеджс
+
+docker build -t ft_server .  -- собрать докер имедж
+docker run -it -p 80:80 -p 443:443 ft_server  -- запустить докер имедж в интерективном режиме
+docker run -p 80:80 -p 443:443 ft_server  -- запустить докер имедж без интерективного режима
+
+docker exec -it aafda12c2fcb bash -- для входа в интерективный режим
+
+eval "$(docker-machine env default)" -- для работы с докером в другом терминале
+
+________________________________________________________________________
+NGINX
+sudo systemctl start nginx
+sudo service start nginx
+
+sudo systemctl stop nginx
+sudo service stop nginx
+
+sudo systemctl restart nginx
+sudo service restart nginx
+
+sudo systemctl reload nginx
+sudo service reload nginx
+
+sudo systemctl status nginx
+sudo status nginx
+
+sudo nginx -v
+
+nginx -s reload
+________________________________________________________________________
+
+/Users/<name>/.docker/machine/machines/default
+cat config.json
+
+_____________
+
+rm -rf .docker !!! В корне перед запуском скрипта на установку докера!!!
+
+________________________________________________________________________
+
+cd Library/Containers
+mv com.docker.docker ~/goinfre
+ln -s ~/goinfre/com.docker.docker com.docker.docker
+________________________________________________________________________
+
+mkdir -p ~/goinfre/docker
+rm -rf ~/Library/Containers/com.docker.docker
+ln -s ~/goinfre/docker ~/Library/Containers/com.docker.docker
+устанавливаешь докер
+________________________________________________________________________

@@ -1,0 +1,6 @@
+Вероятно вы уже поставили HomeBrew, если нет, то сделайте это:
+curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
+Далее подключаем репозиторий:
+brew tap LouisBrunner/valgrind
+И устанавливаем valgrind:
+brew install --HEAD LouisBrunner/valgrind/valgrind

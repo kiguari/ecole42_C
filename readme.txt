@@ -1,3 +1,10 @@
-- Проекты по программе обучения в "Школе 21"
-- Yandex contest
-- Базовое освоение sql
+HELLO FRIEND
+
+Im Vladimir and I study at the international 
+programming school - Ecole42 (Moscow campus)
+
+I have a master's degree in social sciences.
+
+My technical skills:
+- Programming: C/C++, simple shell scripts;
+- DevOps: Docker, Kubernetes, Minikube;

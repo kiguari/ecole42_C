@@ -1,0 +1,1 @@
+My solution to the task "Thinking philosophers".

@@ -1,6 +1,6 @@
 My minishell
 
-The implementation is based on the use of read and termcap, as well as a nice bonus in the form of a "goose" - a small bash script.
+The implementation is based on the use "read" and "termcap", as well as a nice bonus in the form of a "goose" - a small bash script.
 
 Full implementation of commands (pwd, echo, cd, net, export, env, exit), return codes for the command completion status ( $ ?), and so on.
 Other commands work through execve.

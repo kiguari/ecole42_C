@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact_class.hpp                                  :+:      :+:    :+:   */
+/*   ContactClass.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 14:35:58 by eshakita          #+#    #+#             */
-/*   Updated: 2021/08/31 14:48:13 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/16 17:33:46 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ class cont
     std::string phone_number;
     std::string darknest_secret;
     public:
-    cont(): index(0)
-    {}
+    cont();
     void indexx(int count);
     void add_cont();
     void cout_cont();
     void cout_cont_search();
-    void make_table_line(std::string line);    
+    void make_table_line(std::string line);
+    ~cont();
 };
 
 #endif

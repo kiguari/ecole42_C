@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 13:12:19 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/01 17:26:28 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/17 11:12:41 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ class HumanA
 
     public:
         HumanA();
-        HumanA(std::string name, Weapon &weapon) : human_a_wepon(&weapon), human_a_name(name)
-        {}
+        HumanA(std::string name, Weapon &weapon);
         
         void attack();
         

@@ -6,13 +6,13 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 16:19:00 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/07 18:08:33 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/21 15:30:31 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() : ClapTrap()
+ScavTrap::ScavTrap() //: ClapTrap()
 {
     std::cout << "ScavTrap default constructor called" << std::endl;
     this->Name = "no_namerz";
@@ -22,7 +22,7 @@ ScavTrap::ScavTrap() : ClapTrap()
     // std::cout << this->N/ame << std::endl;
 }
 
-ScavTrap::ScavTrap( const std::string nom) : ClapTrap(nom)
+ScavTrap::ScavTrap( const std::string nom) //: ClapTrap(nom)
 {
     std::cout << "ScavTrap value constructor called" << std::endl;
     this->Name = nom;
@@ -32,7 +32,7 @@ ScavTrap::ScavTrap( const std::string nom) : ClapTrap(nom)
     // std::cout << this->Name << std::endl;
 }
 
-ScavTrap::ScavTrap( const ScavTrap &new_scav) : ClapTrap(new_scav)
+ScavTrap::ScavTrap( const ScavTrap &new_scav) //: ClapTrap(new_scav)
 {
     std::cout << "ScavTrap value constructor = called" << std::endl;
     *this = new_scav;
@@ -46,6 +46,11 @@ ScavTrap &ScavTrap::operator= ( const ScavTrap &new_name ) //: ClapTrap(new_name
     this->Energy_points = new_name.int_value_geter(2);
     this->Attac_damage = new_name.int_value_geter(3);
     return (*this);
+}
+
+void ScavTrap::attac(std::string const & target)
+{
+    std::cout << "ScavTrap " << this->Name << " attack " << target << ", causing " << this->Attac_damage << " points of damage!" << std::endl;
 }
 
 void ScavTrap::guardGate()

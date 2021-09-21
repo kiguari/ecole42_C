@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 11:31:39 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/07 10:25:59 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/20 14:58:42 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,27 @@ int main()
     
     std::cout << Fixed::max( a, b ) << std::endl;
 
+    // Fixed c(1);
+    // std::cout << c << std::endl;
+	// std::cout << ++c << std::endl;
+    // std::cout << c << std::endl;
+
+    // Fixed n(2), g(3);
+    // if(n > g)
+    //     std::cout << "n > g" << std::endl;
+    // else
+    //     std::cout << "n < g" << std::endl;
+
+    // float t = 10.55;
+    // std::cout << t << " - t" << std::endl;
+    // t = t * ( 1 << 8 );
+    // std::cout << t << " - t" << std::endl;
+    // t++;
+    // t = t / ( 1 << 8 );
+    // std::cout << t << " - t"<< std::endl;
+
     return 0;
+    
 }
 
 /*

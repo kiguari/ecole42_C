@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:19:51 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/06 14:00:06 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/20 14:45:36 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int     Fixed::getRawBits( void ) const
 
 void    Fixed::setRawBits( int  const raw )
 {
-    std::cout << "";
+    // std::cout << "setRawBits member function called" << std::endl;
     this->number = raw;
 }
 

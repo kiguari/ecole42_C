@@ -6,7 +6,7 @@
 #    By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/01 13:07:31 by eshakita          #+#    #+#              #
-#    Updated: 2021/09/02 16:44:14 by eshakita         ###   ########.fr        #
+#    Updated: 2021/09/17 11:27:19 by eshakita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,12 +18,12 @@ INCLUDES	= Karen.hpp
 
 OBJ_NAME	= $(SRC:.cpp=.o)
 
-CC			= clang++ -Wall -Wextra -Werror
+CC			= clang++ -Wall -Wextra -Werror -std=c++98
 
 RM			= rm -f
 
-.c.o:
-			$(CC) -c $< -o $(<:.cpp=.o
+%.o: %.cpp 	$(INCLUDE)
+			$(CC) $(FLAGS) -c $< -o $@
 
 all:		$(NAME)
 

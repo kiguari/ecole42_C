@@ -1,16 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook_class.cpp                                :+:      :+:    :+:   */
+/*   PhonebookClass.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 13:16:14 by eshakita          #+#    #+#             */
-/*   Updated: 2021/08/31 15:08:21 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/16 14:36:24 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook_class.hpp"
+#include "PhonebookClass.hpp"
+
+phonebook::phonebook()
+{
+	this->count = 0; 
+	this->last_cont = 0;
+}
 
 void phonebook::add_to_phonebook()
 {
@@ -58,3 +64,6 @@ void phonebook::ft_search()
 	}
 	cont[k - 1].cout_cont(); 
 }
+
+phonebook::~phonebook()
+{}

@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:19:30 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/06 12:19:42 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/20 14:17:12 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ class Fixed
     Fixed( const float fnumber );
     Fixed( const Fixed &fix );
     Fixed   &operator= (const Fixed &fix);
-    friend  std::ostream& operator <<(std::ostream &os, const Fixed &out_nimber);
     int     getRawBits( void ) const;
     void    setRawBits( int  const raw );
     float   toFloat( void ) const;
@@ -35,6 +34,6 @@ class Fixed
     ~Fixed();
 };
 
-// std::ostream  &operator <<(std::ostream &os, const Fixed &out_nimber);
+std::ostream  &operator <<(std::ostream &os, const Fixed &out_nimber);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 10:30:59 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/02 15:02:54 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/17 11:24:37 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ int main(int argc, char **argv)
                 i++;
         }
         output_file << input;
+        output_file << "\n";
     }
     return (0);
 }

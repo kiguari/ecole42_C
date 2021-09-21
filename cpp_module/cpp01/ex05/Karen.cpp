@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 15:44:20 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/02 18:16:39 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/17 13:18:19 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,25 @@ void Karen::error( void )
 
 void Karen::complain( std::string level )
 {
-    typedef void (Karen::*function)(void);
-    function f1[4] = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error};
-    function f2;
+    // typedef void (Karen::*function)(void);
+    // function f1[4] = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error}; // массив указателей на функции
+    // function f2;
+    // int i = 0;
+    // while((level_arr[i] != level) && i < 3)
+    //     i++;
+    // f2 = f1[i];
+    // (this->*f2)();
+
+    void (Karen::*function[4])(void) = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error}; // массив указателей на функции
+    void (Karen::*function2)(void);
     int i = 0;
     while((level_arr[i] != level) && i < 3)
         i++;
-    f2 = f1[i];
-    (this->*f2)();
+    function2 = function[i];
+    (this->*function2)();
+}
+
+Karen::~Karen()
+{
+    std::cout << "destructor called" << std::endl;
 }

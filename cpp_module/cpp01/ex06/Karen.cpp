@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 15:44:20 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/02 18:20:55 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/17 12:55:11 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,8 @@ void Karen::complain( std::string level )
     while((level_arr[i] != level) && i < 3)
         i++;
     f2 = f1[i];
-    (this->*f2)();
+    (this->*f2)(); // разыменовываю что бы вызвать функцию
 }
+
+Karen::~Karen()
+{}

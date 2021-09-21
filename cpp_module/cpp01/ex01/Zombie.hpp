@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 17:25:44 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/01 11:36:29 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/17 11:02:29 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,9 @@ class Zombie
     std::string nome_zombi;
     int index;
     public:
-    Zombie(): nome_zombi("nonamerz"), index(0)
-    {}
-	Zombie(const std::string& name) : nome_zombi(name)
-	{}
-    ~Zombie()
-    {std::cout << nome_zombi << index << " is dead - destructor go" << std::endl;}
+    Zombie();
+	Zombie(const std::string name);
+    ~Zombie();
     void get_name(std::string name, int i);
     void annunziu();
 };

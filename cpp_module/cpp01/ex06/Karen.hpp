@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 15:44:17 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/02 17:29:46 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/17 12:55:05 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ class Karen
     public:
         Karen();
         void complain( std::string level );        
-        ~Karen()
-        {}
+        ~Karen();
 };
 
 

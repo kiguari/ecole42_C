@@ -6,7 +6,7 @@
 #    By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/01 12:45:03 by eshakita          #+#    #+#              #
-#    Updated: 2021/09/01 12:45:24 by eshakita         ###   ########.fr        #
+#    Updated: 2021/09/17 10:36:40 by eshakita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,12 +18,12 @@ OBJ_NAME	= $(SRC:.cpp=.o)
 
 INCLUDE		= Zombie.hpp
 
-CC			= clang++ -Wall -Wextra -Werror
+CC			= clang++ -Wall -Wextra -Werror -std=c++98
 
 RM			= rm -f
 
-.c.o:
-			$(CC) -c $< -o $(<:.cpp=.o
+%.o: %.cpp 	$(INCLUDE)
+			$(CC) $(FLAGS) -c $< -o $@
 
 all:		$(NAME)
 

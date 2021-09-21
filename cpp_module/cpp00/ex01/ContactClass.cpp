@@ -1,16 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact_class.cpp                                  :+:      :+:    :+:   */
+/*   ContactClass.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 13:14:36 by eshakita          #+#    #+#             */
-/*   Updated: 2021/08/31 14:44:24 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/16 14:32:28 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact_class.hpp"
+#include "ContactClass.hpp"
+
+cont::cont()
+{
+	this->index = 0;
+}
 
 void cont::indexx(int count)
 {
@@ -68,3 +73,6 @@ void cont::make_table_line(std::string line)
 		std::cout << std::setw(10) << line;
 	std::cout << "|";
 }
+
+cont::~cont()
+{}

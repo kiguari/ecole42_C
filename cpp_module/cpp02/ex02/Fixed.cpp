@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:19:51 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/07 10:26:51 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/20 14:48:41 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,14 @@ Fixed::Fixed(const Fixed &fix)
 
 Fixed::Fixed( const int inumber )
 {
-    std::cout << "Int constructor called" << std::endl;
+    // std::cout << "Int constructor called" << std::endl;
     this->number = inumber << 8;
+    // this->number = inumber;
 }
 
 Fixed::Fixed( const float fnumber)
 {
-    std::cout << "Float constructor called" << std::endl;
+    // std::cout << "Float constructor called" << std::endl;
     float tmp;
     // this->number = roundf(fnumber * (1 << bits));
     tmp = fnumber * (1 << this->bits);
@@ -59,6 +60,7 @@ float   Fixed::toFloat( void ) const
 
 int Fixed::toInt( void ) const
 {
+    // return(this->number);
     return(this->number >> bits);
 }
 
@@ -70,7 +72,7 @@ int     Fixed::getRawBits( void ) const
 
 void    Fixed::setRawBits( int  const raw )
 {
-    // std::cout << "";
+    // std::cout << "setRawBits member function called" << std::endl;
     this->number = raw;
 }
 
@@ -83,6 +85,7 @@ Fixed::~Fixed()
 std::ostream &operator <<(std::ostream &out, const Fixed &out_nimber)
 {
     out << out_nimber.toFloat();
+    // out << out_nimber.toInt();
     return (out);
 }
 

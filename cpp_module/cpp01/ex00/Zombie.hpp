@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombie.hpp                                         :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 17:25:44 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/01 11:36:39 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/17 10:56:20 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,13 @@
 
 class Zombie
 {
-    private:
+private:
     std::string nome_zombi;
-    
-    public:
-    Zombie(): nome_zombi("nonamerz")
-    {}
-	Zombie(const std::string& name) : nome_zombi(name)
-	{}
-    ~Zombie()
-    {std::cout << nome_zombi << " is dead - destructor go" << std::endl;}
+
+public:
+    Zombie();
+	Zombie(const std::string& name);
+    ~Zombie();
     void get_name(std::string name);
     void annunziu();
 };

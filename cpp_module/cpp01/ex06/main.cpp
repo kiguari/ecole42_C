@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 15:44:14 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/02 18:21:19 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/17 12:00:07 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int main(int argc, char **argv)
     std::string command;
     int i = 0;
     int j = 0;
+    (void)argc;
     while(argv[1] && argv[1][i])
     {
         command += (char)std :: toupper(argv[1][i]);

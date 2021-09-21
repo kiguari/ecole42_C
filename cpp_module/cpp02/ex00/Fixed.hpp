@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:19:30 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/03 14:20:25 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/20 14:03:17 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@
 
 class Fixed
 {
-    private:
+private:
     int number;
     static const int bits = 8;
-    public:
+    
+public:
     Fixed();
     Fixed(const Fixed &fix);
     Fixed   &operator= (const Fixed &fix);

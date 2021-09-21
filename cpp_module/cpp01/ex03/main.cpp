@@ -6,11 +6,10 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 13:07:59 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/01 17:22:09 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/17 10:37:52 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "Weapon.hpp"
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 

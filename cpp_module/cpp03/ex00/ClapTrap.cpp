@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 10:45:31 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/07 17:46:12 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/21 12:20:21 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ ClapTrap &ClapTrap::operator= ( const ClapTrap &new_name )
     this->Hitpoint = new_name.int_value_geter(1);
     this->Energy_points = new_name.int_value_geter(2);
     this->Attac_damage = new_name.int_value_geter(3);
-    // this->
     return (*this);
 }
 
@@ -56,9 +55,7 @@ void ClapTrap::takeDamage( unsigned int amounth )
 {
     // std::cout << "ClapTrap " << this->Name << " take damage " << std::endl;
     if(amounth == 0)
-    {
         std::cout << "ClapTrap " << this->Name << " armor - is not pierced" << std::endl;
-    }
     else if(this->Hitpoint <= 0)
         std::cout << "ClapTrap " << this->Name << " is dead " << std::endl;
     else if(amounth >= this->Hitpoint)

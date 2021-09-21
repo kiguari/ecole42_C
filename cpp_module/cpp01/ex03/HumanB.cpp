@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 13:12:22 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/01 17:27:05 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/09/17 11:11:53 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,11 @@ void HumanB::setWeapon(Weapon &new_weapon)
 }
 
 HumanB::~HumanB()
-{}
+{
+    this->human_b_name = "default_name";
+}
+
+HumanB::HumanB(std::string name)
+{
+    this->human_b_name = name;
+}

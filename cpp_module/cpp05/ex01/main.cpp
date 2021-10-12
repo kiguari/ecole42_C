@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 12:43:22 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/12 13:00:47 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/12 15:09:12 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@ Form::GradeTooHighException
 grade бюракрата достаточен, если grade недостаточен то кинуть исключение Form::GradeTooLowException
 - реализовать метод signForm, если форма подписана, напечатать "<bureaucrat> signs <form>"
 иначе "<bureaucrat> cannot sign <form> because <reason>"
+
+реализовать перегрузку оператора << полностью описываюший состояние формы
+
 */
 
 #include "Bureaucrat.hpp"

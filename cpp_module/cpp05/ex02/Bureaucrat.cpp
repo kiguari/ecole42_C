@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 13:03:08 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/12 13:43:56 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/12 17:33:04 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,20 @@ void Bureaucrat::signForm(Form &signeted)
     }
     std::cout << this->getName() << " signs " << signeted.getName() << std::endl;
     signeted.setSign();
+}
+
+void Bureaucrat::executeForm(Form const & form)
+{
+    try
+    {
+        form.execute(*this);
+        if(form.getFormStatus())
+            std::cout << this->getName() << " executes " << form.getName() << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }    
 }
 
 Bureaucrat::~Bureaucrat()

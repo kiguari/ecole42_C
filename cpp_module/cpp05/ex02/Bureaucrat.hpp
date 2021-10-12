@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 13:03:06 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/12 13:47:32 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/12 15:59:03 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,9 @@ public:
     void grade_plus_inkriment();
     int getGrade() const;
     /* const */ std::string getName() const;
-    // плюс метод по сабджекту который подписывает форму
     void signForm(Form &signeted);
+
+    void executeForm(Form const & form);
     
     ~Bureaucrat();
 };

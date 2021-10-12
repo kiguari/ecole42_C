@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 17:10:47 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/12 13:02:43 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/12 15:31:26 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Form::Form( const std::string new_name, const int new_grade_required) : name(new
 
 Form::Form( const Form &new_form) : name(new_form.getName()), grade_required(new_form.getGrade_required())
 {
-    this->indicator = false;
+    this->indicator = new_form.getFormStatus();
 }
 
 Form &Form::operator= (const Form &new_form)
@@ -49,21 +49,15 @@ const char* Form::GradeTooLowException::what() const throw()
 
 void Form::beSigned(Bureaucrat &burik)
 {
-    if(this->getFormStatus())
-    {
-        std::cout << "this form - " << this->getName() << " has already been signed" << std::endl;
-        return;
-    }
     if(burik.getGrade() > this->getGrade_required())
         throw GradeTooHighException();
-    else if(burik.getGrade() < this->getGrade_required())
+    else if(burik.getGrade() <= this->getGrade_required())
         burik.signForm(*this);
 }
 
 void Form::setSign()
 {
     this->indicator = true;
-    std::cout << "this form - " << this->getName() << " has been successfully signed" << std::endl;
 }
 
 std::string Form::getName() const
@@ -84,4 +78,13 @@ bool Form::getFormStatus() const
 Form::~Form()
 {
     // std::cout << "delete " << this->getName() << std::endl
+}
+
+std::ostream &operator<< (std::ostream &out, const Form &out_Form)
+{
+    if(out_Form.getFormStatus())
+        out << "Form name - " << out_Form.getName() << " grade required for this form - " << out_Form.getName() << " success sign" << std::endl;
+    else
+        out << "Form name - " << out_Form.getName() << " grade required for this form - " << out_Form.getName() << " fail sign" << std::endl;
+    return(out);
 }

@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 12:43:22 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/11 17:05:47 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/12 17:38:34 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,6 @@ int main()
         std::cout << burik2 << std::endl;
         burik2.grade_plus_inkriment();
         std::cout << burik2 << std::endl;
-        
-
     }
     /*
     Ловит std::exception и все дочерние ему классы-исключения

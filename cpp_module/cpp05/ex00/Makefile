@@ -6,17 +6,17 @@
 #    By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/08 12:31:05 by eshakita          #+#    #+#              #
-#    Updated: 2021/10/06 13:13:23 by eshakita         ###   ########.fr        #
+#    Updated: 2021/10/11 17:03:31 by eshakita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Polymorphizm
+NAME		= Bureaucrat
 
-SRC			= main.cpp CatClass.cpp AnimalClass.cpp DogClass.cpp WrongAnimalClass.cpp WrongCatClass.cpp
+SRC			= main.cpp Bureaucrat.cpp
 
 OBJ_NAME	= $(SRC:.cpp=.o)
 
-INCLUDE		= CatClass.hpp AnimalClass.hpp DogClass.hpp WrongAnimalClass.hpp WrongCatClass.hpp
+INCLUDE		= Bureaucrat.hpp
 
 CC			= clang++ -Wall -Wextra -Werror -std=c++98
 

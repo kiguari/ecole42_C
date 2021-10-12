@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   BrainClass.hpp                                     :+:      :+:    :+:   */
+/*   ICharacterClass.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/08 17:48:52 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/06 16:10:45 by eshakita         ###   ########.fr       */
+/*   Created: 2021/09/14 15:38:07 by eshakita          #+#    #+#             */
+/*   Updated: 2021/10/07 16:09:55 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAINCLASS_HPP
-#define BRAINCLASS_HPP
+#ifndef ICHARACTERCLASS_HPP
+#define ICHARACTERCLASS_HPP
 
-#include "AnimalClass.hpp"
+#include "AMateriaClass.hpp"
 
-class Brain
+class AMateria;
+
+class ICharacter
 {
-private:
-    std::string called_ideas[100];
 public:
-    Brain();
-    Brain( std::string str );
-    Brain( const Brain &new_brain );
-    Brain &operator= ( const Brain &new_brain );
-    std::string idea_geter(int code) const;
-    void idea_seter(int i, std::string new_idea);
-    ~Brain();
+    virtual ~ICharacter() {}
+    virtual std::string const & getName() const = 0;
+    virtual void equip(AMateria* m) = 0;
+    virtual void unequip(int idx) = 0;
+    virtual void use(int idx, ICharacter& target) = 0;
 };
-
-
 
 #endif

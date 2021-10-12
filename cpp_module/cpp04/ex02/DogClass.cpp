@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 12:55:14 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/09 12:19:32 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/06 16:51:57 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,22 @@ Dog::Dog( std::string str )
 
 Dog::Dog( const Dog &new_dog )
 {
-    std::cout << "DogClass value constructor = called" << std::endl;
+    std::cout << "DogClass value constructor = called its deep" << std::endl;
     *this = new_dog;
 }
 
 Dog &Dog::operator= ( const Dog &new_dog )
 {
-    std::cout << "DogClass Assignation operator called" << std::endl;
+    std::cout << "DogClass Assignation operator called its deep" << std::endl;
     this->type = new_dog.getType();
     if(new_dog.type != "default dog")
-        this->Dog_brain = new Brain("dog idea");
+    {
+        this->Dog_brain = new Brain();
+        for(int i = 0; i < 100; i++)
+        {
+            this->Dog_brain->idea_seter(i, new_dog.Dog_brain->idea_geter(i));
+        }
+    }
     else
         this->Dog_brain = NULL;
     this->type = new_dog.type;

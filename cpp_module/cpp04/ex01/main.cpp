@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 12:32:01 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/09 12:51:26 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/08 15:43:35 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 int main()
 {
+    
     // std::cout << "-------------------------------------------------" << std::endl;
     // std::cout << "--------------- main from subject ---------------" << std::endl;
     // std::cout << "-------------------------------------------------" << std::endl;
@@ -72,16 +73,17 @@ int main()
     // delete test2;
     // delete test3;
 
+    Animal Animal1;
     
-    // std::cout << "-------------------------------------------------" << std::endl;
-    // std::cout << "--------------- main from subject ---------------" << std::endl;
-    // std::cout << "-------------------------------------------------" << std::endl;
+    std::cout << "-------------------------------------------------" << std::endl;
+    std::cout << "--------------- main from subject ---------------" << std::endl;
+    std::cout << "-------------------------------------------------" << std::endl;
     
-    // const Animal* j = new Dog();
-    // const Animal* i = new Cat();
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
     
-    // delete j;//should not create a leak
-    // delete i;
+    delete j;//should not create a leak
+    delete i;
 
     std::cout << "-------------------------------------------------" << std::endl;
     std::cout << "--------------- main from subject ---------------" << std::endl;
@@ -112,43 +114,42 @@ int main()
     
     std::cout << "-------------------------------------------------" << std::endl;
 
-    // std::cout << "-------------------------------------------------" << std::endl;
-    // std::cout << "--------- no subject main - dop testing ---------" << std::endl;
-    // std::cout << "-------------------------------------------------" << std::endl;
-    // Cat cat1("cat1");
-    // Cat cat2("cat2");
-    // Cat cat3(cat1);
-    // Cat cat4;
-    // cat4 = cat2;
+    std::cout << "-------------------------------------------------" << std::endl;
+    std::cout << "--------- no subject main - dop testing ---------" << std::endl;
+    std::cout << "-------------------------------------------------" << std::endl;
+    Cat cat1("cat1");
+    Cat cat2("cat2");
+    Cat cat3(cat1);
+    Cat cat4;
+    cat4 = cat2;
     
-    // Brain brain1("brain1");
-    // Brain brain2("brain2");
-    // Brain brain3(brain1);
-    // Brain brain4;
-    // brain4 = brain2;
+    Brain brain1("brain1");
+    Brain brain2("brain2");
+    Brain brain3(brain1);
+    Brain brain4;
+    brain4 = brain2;
 
-    // Dog Dog1("Dog1");
-    // Dog Dog2("Dog2");
-    // Dog Dog3(Dog1);
-    // Dog Dog4;
-    // Dog4 = Dog2;
+    Dog Dog1("Dog1");
+    Dog Dog2("Dog2");
+    Dog Dog3(Dog1);
+    Dog Dog4;
+    Dog4 = Dog2;
     
-    // brain1.idea_geter(0);
-    // brain2.idea_geter(0);
-    // brain3.idea_geter(0);
-    // brain4.idea_geter(0);
-    // brain4.idea_geter(1);
+    brain1.idea_geter(0);
+    brain2.idea_geter(0);
+    brain3.idea_geter(0);
+    brain4.idea_geter(0);
+    brain4.idea_geter(1);
 
-    // cat1.makeSound();
-    // cat2.makeSound();
-    // cat3.makeSound();
-    // cat4.makeSound();
+    cat1.makeSound();
+    cat2.makeSound();
+    cat3.makeSound();
+    cat4.makeSound();
 
-    // Dog1.makeSound();
-    // Dog2.makeSound();
-    // Dog3.makeSound();
-    // Dog4.makeSound();
+    Dog1.makeSound();
+    Dog2.makeSound();
+    Dog3.makeSound();
+    Dog4.makeSound();
 
-        
     return(0);
 }

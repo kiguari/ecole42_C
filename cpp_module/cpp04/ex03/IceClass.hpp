@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   BrainClass.hpp                                     :+:      :+:    :+:   */
+/*   IceClass.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/08 17:48:52 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/06 16:10:45 by eshakita         ###   ########.fr       */
+/*   Created: 2021/10/07 09:40:10 by eshakita          #+#    #+#             */
+/*   Updated: 2021/10/08 10:19:53 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAINCLASS_HPP
-#define BRAINCLASS_HPP
+#ifndef ICECLASS_HPP
+# define ICECLASS_HPP
 
-#include "AnimalClass.hpp"
+#include "AMateriaClass.hpp"
 
-class Brain
+class Ice : public AMateria
 {
-private:
-    std::string called_ideas[100];
 public:
-    Brain();
-    Brain( std::string str );
-    Brain( const Brain &new_brain );
-    Brain &operator= ( const Brain &new_brain );
-    std::string idea_geter(int code) const;
-    void idea_seter(int i, std::string new_idea);
-    ~Brain();
+    Ice();
+    Ice( std::string const &new_type);
+    Ice( const Ice &new_ice);
+    Ice &operator= (const Ice &new_ice);
+    AMateria* clone() const;
+    void use(ICharacter& target);
+    ~Ice(); 
 };
-
-
 
 #endif

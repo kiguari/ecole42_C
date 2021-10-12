@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 12:54:22 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/08 16:45:32 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/06 10:57:07 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Animal::Animal()
 {
-    this->type = "default";
+    this->type = "default Animal";
     std::cout << "AnimalClass default constructor called" << std::endl;
 }
 

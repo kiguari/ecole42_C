@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 12:32:01 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/08 16:44:49 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/06 13:17:58 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ int main()
     test5.makeSound();
     test6.makeSound();
     std::cout << "-------------------------------------------------" << std::endl;
+    delete test;
     delete test1;
     delete test2;
     delete test3;

@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   BrainClass.hpp                                     :+:      :+:    :+:   */
+/*   CureClass.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/08 17:48:52 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/06 16:10:45 by eshakita         ###   ########.fr       */
+/*   Created: 2021/10/07 09:32:23 by eshakita          #+#    #+#             */
+/*   Updated: 2021/10/07 15:16:48 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAINCLASS_HPP
-#define BRAINCLASS_HPP
+#ifndef CURECLASS_HPP
+# define CURECLASS_HPP
 
-#include "AnimalClass.hpp"
+#include "AMateriaClass.hpp"
 
-class Brain
+class Cure : public AMateria
 {
-private:
-    std::string called_ideas[100];
 public:
-    Brain();
-    Brain( std::string str );
-    Brain( const Brain &new_brain );
-    Brain &operator= ( const Brain &new_brain );
-    std::string idea_geter(int code) const;
-    void idea_seter(int i, std::string new_idea);
-    ~Brain();
+    Cure();
+    Cure( std::string const &new_type);
+    Cure( const Cure &new_cure);
+    Cure &operator= (const Cure &new_cure);
+    AMateria* clone() const;
+    void use(ICharacter& target);
+    ~Cure(); 
 };
-
-
 
 #endif

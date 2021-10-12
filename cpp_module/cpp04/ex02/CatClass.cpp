@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 12:51:17 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/09 12:14:11 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/06 16:50:55 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ Cat::Cat() : Animal()
 Cat::Cat( std::string str)
 {
     std::cout << "CatClass value constructor called" << std::endl;
-    this->type = str;
+    if(str == "default cat")
+        this->type = str + "t";
+    else
+        this->type = str;
     this->Cat_brain = new Brain("cat idea");
 }
 
@@ -42,7 +45,13 @@ Cat &Cat::operator= ( const Cat &new_cat )
     std::cout << "CatClass Assignation operator called its deep" << std::endl;
     this->type = new_cat.getType();
     if(new_cat.type != "default cat") 
-        this->Cat_brain = new Brain("cat idea");
+    {
+        this->Cat_brain = new Brain();
+        for(int i = 0; i < 100; i++)
+        {
+            this->Cat_brain->idea_seter(i, new_cat.Cat_brain->idea_geter(i));
+        }
+    }
     else
         this->Cat_brain = NULL;
     this->type = new_cat.type;

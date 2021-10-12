@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 12:32:01 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/09 14:05:57 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/08 15:44:46 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,8 +83,6 @@ int main()
     // delete j;//should not create a leak
     // delete i;
 
-    Animal Animal1;
-
     std::cout << "-------------------------------------------------" << std::endl;
     std::cout << "--------------- main from subject ---------------" << std::endl;
     std::cout << "-------- main from subject ( arrey path )--------" << std::endl;
@@ -105,10 +103,8 @@ int main()
     while(count < 10)
     {
         delete Animal_arr[count];
-        std::cout << count << std::endl;
         count++;
     }
-    std::cout << count << std::endl;
     
     // delete [] Animal_arr;
     

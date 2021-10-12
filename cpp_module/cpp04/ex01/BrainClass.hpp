@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 17:48:52 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/09 11:35:50 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/06 14:43:52 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public:
     Brain( const Brain &new_brain );
     Brain &operator= ( const Brain &new_brain );
     std::string idea_geter(int code) const;
-    void idea_seter(std::string new_idea);
+    void idea_seter(int i, std::string new_idea);
     ~Brain();
 };
 

@@ -6,17 +6,17 @@
 #    By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/08 12:31:05 by eshakita          #+#    #+#              #
-#    Updated: 2021/10/13 12:52:41 by eshakita         ###   ########.fr        #
+#    Updated: 2021/10/13 12:51:58 by eshakita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= Bureaucrat
 
-SRC			= main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+SRC			= main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 
 OBJ_NAME	= $(SRC:.cpp=.o)
 
-INCLUDE		= Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp
+INCLUDE		= Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp Intern.hpp
 
 CC			= clang++ -Wall -Wextra -Werror -std=c++98
 

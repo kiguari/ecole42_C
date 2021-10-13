@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 12:43:22 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/12 17:49:39 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/13 11:25:18 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,60 +49,60 @@ int main()
     {
         // ShrubberyCreationForm test
         // тест бюракрат может подписать форму, но не может ее выполнить
-        // Bureaucrat burik1(144, "buric1");
-        // ShrubberyCreationForm form1("Home1");
-        // form1.beSigned(burik1);
-        // burik1.executeForm(form1);
+        Bureaucrat burik1(144, "buric1");
+        ShrubberyCreationForm form1("Home1");
+        form1.beSigned(burik1);
+        burik1.executeForm(form1);
 
         // тест бюракрат может и подписать и выполнить
-        // Bureaucrat burik2(1, "buric2");
-        // ShrubberyCreationForm form2("Home2");
-        // form2.beSigned(burik2);
-        // burik2.executeForm(form2);
+        Bureaucrat burik2(1, "buric2");
+        ShrubberyCreationForm form2("Home2");
+        form2.beSigned(burik2);
+        burik2.executeForm(form2);
 
         // тест бюракрат не может и подписать и выполнить
-        // Bureaucrat burik3(150, "buric3");
-        // ShrubberyCreationForm form3("Home3");
-        // form3.beSigned(burik3);
-        // burik3.executeForm(form3);
+        Bureaucrat burik3(150, "buric3");
+        ShrubberyCreationForm form3("Home3");
+        form3.beSigned(burik3);
+        burik3.executeForm(form3);
 
         // RobotomyRequestForm
         // тест бюракрат может подписать форму, но не может ее выполнить
-        // Bureaucrat burik4(144, "buric4");
-        // RobotomyRequestForm form4("Home4");
-        // form4.beSigned(burik4);
-        // burik4.executeForm(form4);
+        Bureaucrat burik4(144, "buric4");
+        RobotomyRequestForm form4("Home4");
+        form4.beSigned(burik4);
+        burik4.executeForm(form4);
 
         // тест бюракрат может и подписать и выполнить
-        // Bureaucrat burik5(1, "buric5");
-        // RobotomyRequestForm form5("Home5");
-        // form5.beSigned(burik5);
-        // burik5.executeForm(form5);
+        Bureaucrat burik5(1, "buric5");
+        RobotomyRequestForm form5("Home5");
+        form5.beSigned(burik5);
+        burik5.executeForm(form5);
 
         // тест бюракрат не может и подписать и выполнить
-        // Bureaucrat burik6(150, "buric6");
-        // RobotomyRequestForm form6("Home6");
-        // form6.beSigned(burik6);
-        // burik6.executeForm(form6);
+        Bureaucrat burik6(150, "buric6");
+        RobotomyRequestForm form6("Home6");
+        form6.beSigned(burik6);
+        burik6.executeForm(form6);
 
         // PresidentialPardonForm
         // тест бюракрат может подписать форму, но не может ее выполнить
-        // Bureaucrat burik7(144, "buric7");
-        // PresidentialPardonForm form7("Home7");
-        // form7.beSigned(burik7);
-        // burik7.executeForm(form7);
+        Bureaucrat burik7(144, "buric7");
+        PresidentialPardonForm form7("Home7");
+        form7.beSigned(burik7);
+        burik7.executeForm(form7);
 
         // // тест бюракрат может и подписать и выполнить
-        // Bureaucrat burik8(1, "buric8");
-        // PresidentialPardonForm form8("Home8");
-        // form8.beSigned(burik8);
-        // burik8.executeForm(form8);
+        Bureaucrat burik8(1, "buric8");
+        PresidentialPardonForm form8("Home8");
+        form8.beSigned(burik8);
+        burik8.executeForm(form8);
 
         // // тест бюракрат не может и подписать и выполнить
-        // Bureaucrat burik9(150, "buric9");
-        // PresidentialPardonForm form9("Home9");
-        // form9.beSigned(burik9);
-        // burik9.executeForm(form9);
+        Bureaucrat burik9(150, "buric9");
+        PresidentialPardonForm form9("Home9");
+        form9.beSigned(burik9);
+        burik9.executeForm(form9);
     }
     catch(const std::exception& e)
     {

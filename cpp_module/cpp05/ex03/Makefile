@@ -6,11 +6,11 @@
 #    By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/08 12:31:05 by eshakita          #+#    #+#              #
-#    Updated: 2021/10/13 12:51:58 by eshakita         ###   ########.fr        #
+#    Updated: 2021/10/13 13:09:42 by eshakita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Bureaucrat
+NAME		= Intern
 
 SRC			= main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 

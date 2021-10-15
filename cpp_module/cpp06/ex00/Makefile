@@ -6,17 +6,17 @@
 #    By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/08 12:31:05 by eshakita          #+#    #+#              #
-#    Updated: 2021/10/13 13:09:55 by eshakita         ###   ########.fr        #
+#    Updated: 2021/10/15 13:13:04 by eshakita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Forms
+NAME		= convert
 
-SRC			= main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+SRC			= main.cpp Conversion.cpp
 
 OBJ_NAME	= $(SRC:.cpp=.o)
 
-INCLUDE		= Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp
+INCLUDE		= Conversion.hpp
 
 CC			= clang++ -Wall -Wextra -Werror -std=c++98
 
@@ -34,11 +34,6 @@ clean:
 			$(RM) $(OBJ_NAME)
 
 fclean:		clean
-			$(RM) ${NAME} .asciithree *_shrubbery
-
-three:		
-			brew install tree
-			touch .asciithree
-			tree --charset=ASCII >> .asciithree
+			$(RM) ${NAME}
 
 re:			fclean all

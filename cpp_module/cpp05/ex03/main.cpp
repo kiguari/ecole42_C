@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 12:43:22 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/13 12:52:51 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/13 13:00:16 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,8 +128,6 @@ int main()
         form14 = Intern14.makeForm("error", "Bender");
         form14->beSigned(burik14);
         burik14.executeForm(*form14);
-        
-        
     }
     catch(const std::exception& e)
     {

@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 14:15:18 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/15 18:07:13 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/18 09:56:09 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ int main()
     Base &base2 = *base1;
     identify(base1);
     identify(base2);
-    identify(NULL);
-    identify(0);
+    // identify(NULL);
+    // identify(0);
     return(0);
 }

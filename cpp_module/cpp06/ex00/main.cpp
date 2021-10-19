@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 13:32:10 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/15 13:12:28 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/18 13:54:40 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,12 +61,12 @@ int main(int argc, char *argv[])
     
     //same test for look like strtod work
     
-    // char        **str2;
-    // std::string str = argv[1];
-    // double      test = std::strtod(str.c_str(), str2);
-    // int         test2 = static_cast<int>(test);
-    // char        test3 = static_cast<char>(test);
-    // float       test4 = static_cast<float>(test);
+    char        **str2;
+    std::string str = argv[1];
+    double      test = std::strtod(str.c_str(), str2);
+    int         test2 = static_cast<int>(test);
+    char        test3 = static_cast<char>(test);
+    float       test4 = static_cast<float>(test);
     
     // std::cout << "double convers - " << test << std::endl;
     // std::cout << "int convers - " << test2 << std::endl;

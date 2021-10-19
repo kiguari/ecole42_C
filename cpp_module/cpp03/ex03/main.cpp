@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 11:31:39 by eshakita          #+#    #+#             */
-/*   Updated: 2021/09/21 14:50:55 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/18 13:38:23 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@
 
 int main()
 {
-    ClapTrap first("Neo");
-    ClapTrap second("Smith");
-    ClapTrap third;
-    ClapTrap fourth = second;
-    third = first;
-    first.attac(second.name_geter());
-    first.takeDamage(10);
-    first.beRepaired(10);
-    second.attac(first.name_geter());
-    second.takeDamage(10);
+    // ClapTrap first("Neo");
+    // ClapTrap second("Smith");
+    // ClapTrap third;
+    // ClapTrap fourth = second;
+    // third = first;
+    // first.attac(second.name_geter());
+    // first.takeDamage(10);
+    // first.beRepaired(10);
+    // second.attac(first.name_geter());
+    // second.takeDamage(10);
 
     // ScavTrap five;
     // ScavTrap six("GOOF");
@@ -79,10 +79,11 @@ int main()
     // test = new DiamondTrap();
     // delete test;
     
-    // DiamondTrap test2("test1");
+    DiamondTrap test2("test1");
     // std::cout << test2.name_geter() << std::endl;
     // std::cout << test2.get_name_diamon() << std::endl;
-    // test2.attac("dfg");
-    // test2.whoAmI();
+    test2.attac("dfg");
+    test2.whoAmI();
+    test2.guardGate();
     return 0;
 }

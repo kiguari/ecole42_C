@@ -6,7 +6,7 @@
 #    By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/08 12:31:05 by eshakita          #+#    #+#              #
-#    Updated: 2021/10/20 10:15:52 by eshakita         ###   ########.fr        #
+#    Updated: 2021/10/20 17:59:33 by eshakita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRC			= main.cpp
 
 OBJ_NAME	= $(SRC:.cpp=.o)
 
-INCLUDE		= iter.hpp
+INCLUDE		= .hpp
 
 CC			= clang++ -Wall -Wextra -Werror -std=c++98
 

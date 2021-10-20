@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 11:11:45 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/20 13:40:52 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/20 17:59:09 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ITER_HPP
-#define ITER_HPP
+#ifndef EASYFIND_HPP
+#define EASYFIND_HPP
 
 #include <iostream>
+#include <vector>
 
-template <typename T>
-void print_arr_element(T a)
+class NotFind : public std::exception
 {
-    std::cout << "element - " << a << std::endl;
-}
+    public:
+        const char* what() const throw() {return("Value not find");}
+};
 
-template <typename T>
-void iter(T* a, int size, void (*print)(T const &foo))
+template <typename T, typename T2> // 
+bool easyFind(T array, T2 value) //
 {
-    for(int i = 0; i < size; i++)
-        print(a[i]);
+    for(typename T::iterator i = array.begin(); i != array.end(); ++i)
+    {
+        if(*i == value)
+        {
+            // std::cout << "easyfind - find value " << value << std::endl;
+            return true;
+        }
+    }
+    // throw NotFind();
+    return(false);
 }
 
 #endif

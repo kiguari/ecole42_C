@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 11:11:45 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/19 14:04:44 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/20 10:00:18 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,9 @@ public:
     }
     Array(unsigned int new_array_size) : array(nullptr), array_size(new_array_size), flag(1)//, array = new T[new_array_size]
     {
-        if(array_size == 0) // нет смысла создавать массив размеров в 0, хотя это возможно, оператор new иии компилятор не ругаются
+        if(array_size == 0) // нет смысла создавать массив размеров в 0, хотя это возможно, оператор new и компилятор не ругаются
             throw ArrayExp();
         array = new T[array_size];
-        for(int i = 0; i < array_size; i++)
-        {
-            array[i] = 0;
-        }
     }
     Array(const Array &new_Array)
     {
@@ -107,7 +103,7 @@ public:
     
     int size() const
     {
-        retunr(this->array_size);
+        return(this->array_size);
     }
     
     ~Array()

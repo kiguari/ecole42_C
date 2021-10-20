@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 11:00:57 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/19 14:17:50 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/20 10:04:52 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,44 +27,157 @@
 
 int main( void ) 
 {
-    // сдаем массив интов 0
+    // std::string re = 0;
+    // INT ///////////////////////////////////////////////////////////
+    // сдаем массив интов 0 
     try
     {
         Array<int> test(0);
+        std::cout << "test 1 int - ok" << std::endl;
     }
     catch(const std::exception& e)
     {
         std::cerr << e.what() << '\n';
+        std::cout << "test 1 int - not ok" << std::endl;
     }
     // сдаем массив интов <0
     try
     {
-        Array<int> test(-5);
+        Array<int> test2(-5);
+        std::cout << "test 2 int - ok" << std::endl;
     }
     catch(const std::exception& e)
     {
         std::cerr << e.what() << '\n';
+        std::cout << "test 2 int - not ok" << std::endl;
     }
     // сдалаем массив интов дефолтный
     try
     {
-        Array<int> test;
+        Array<int> test3;
+        std::cout << "test 3 int - ok" << std::endl;
     }
     catch(const std::exception& e)
     {
         std::cerr << e.what() << '\n';
+        std::cout << "test 3 int - not ok" << std::endl;
     }
     // сдаем массив интов >0
     try
     {
-        Array<int> test(10);
+        Array<int> test4(10);
+        std::cout << "test 4 int - ok" << std::endl;
     }
     catch(const std::exception& e)
     {
         std::cerr << e.what() << '\n';
+        std::cout << "test 4 int - not ok" << std::endl;
+    }
+    
+    // system ("leaks array");
+    // return 0;
+
+
+    // FLOAT ///////////////////////////////////////////////////////////
+    // сдаем массив флотов 0
+    try
+    {
+        Array<float> test5(0);
+        std::cout << "test 5 float - ok" << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+        std::cout << "test 5 float - not ok" << std::endl;
+    }
+    // сдаем массив флотов <0
+    try
+    {
+        Array<float> test6(-5);
+        std::cout << "test 6 float - ok" << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+        std::cout << "test 6 float - not ok" << std::endl;
+    }
+    // сдалаем массив флотов дефолтный
+    try
+    {
+        Array<float> test7;
+        std::cout << "test 7 float - ok" << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+        std::cout << "test 7 float - not ok" << std::endl;
+    }
+    // сдаем массив флотов>0
+    try
+    {
+        Array<float> test8(10);
+        std::cout << "test 8 float - ok" << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+        std::cout << "test 8 float - not ok" << std::endl;
+    }
+    
+    // system ("leaks array");
+    // return 0;
+
+    // STRING ///////////////////////////////////////////////////////////
+    // сдаем массив флотов 0
+    try
+    {
+        Array<std::string> test9(0);
+        std::cout << "test 9 std::string - ok" << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+        std::cout << "test 9 std::string - not ok" << std::endl;
+    }
+    // сдаем массив флотов <0
+    try
+    {
+        Array<std::string> test10(-5);
+        std::cout << "test 10 std::string - ok" << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+        std::cout << "test 10 std::string - not ok" << std::endl;
+    }
+    // сдалаем массив флотов дефолтный
+    try
+    {
+        Array<std::string> test11;
+        std::cout << "test 11 std::string - ok" << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+        std::cout << "test 11 std::string - not ok" << std::endl;
+    }
+    // сдаем массив флотов>0
+    try
+    {
+        Array<std::string> test12(10);
+        std::cout << "test 12 std::string - ok" << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+        std::cout << "test 12 std::string - not ok" << std::endl;
     }
     
     system ("leaks array");
+    // std::cout << sizeof(int) << std::endl;
+    // std::cout << sizeof(float) << std::endl;
+    // std::cout << sizeof(double) << std::endl;
+    // std::cout << sizeof(std::string) << std::endl;
     return 0; 
 }
 

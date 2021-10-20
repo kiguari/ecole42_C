@@ -6,17 +6,17 @@
 #    By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/08 12:31:05 by eshakita          #+#    #+#              #
-#    Updated: 2021/10/20 10:15:52 by eshakita         ###   ########.fr        #
+#    Updated: 2021/10/20 16:52:11 by eshakita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= iter
+NAME		= template
 
 SRC			= main.cpp
 
 OBJ_NAME	= $(SRC:.cpp=.o)
 
-INCLUDE		= iter.hpp
+INCLUDE		= easyfind.hpp
 
 CC			= clang++ -Wall -Wextra -Werror -std=c++98
 

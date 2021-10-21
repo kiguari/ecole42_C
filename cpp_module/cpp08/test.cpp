@@ -10,5 +10,6 @@ int     main()
     //     v.
     for (std::vector<int>::iterator i = v.begin(); i != v.end(); ++i)
         std::cout << *i << ' ';
+    std::vector<int> c(4, 8);
     return(0);
 }

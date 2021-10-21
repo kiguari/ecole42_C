@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 13:32:10 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/20 17:38:48 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/21 16:18:28 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,9 @@ int main(int argc, char *argv[])
     
     //same test for look like strtod work
     
-    // char        **str2;
+    // char        *str2 = NULL;
     // std::string str = argv[1];
-    // double      test = std::strtod(str.c_str(), str2);
+    // double      test = static_cast<double>(std::strtod(str.c_str(), &str2));
     // int         test2 = static_cast<int>(test);
     // char        test3 = static_cast<char>(test);
     // float       test4 = static_cast<float>(test);

@@ -6,11 +6,11 @@
 #    By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/08 12:31:05 by eshakita          #+#    #+#              #
-#    Updated: 2021/10/21 15:14:30 by eshakita         ###   ########.fr        #
+#    Updated: 2021/10/22 10:11:51 by eshakita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= array
+NAME		= stack
 
 SRC			= main.cpp mutantstack.cpp
 

@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 11:11:45 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/21 10:43:14 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/22 13:53:49 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,12 @@ template <typename T>
 но тогда мы не сможем использовать для например стрингового вектора или флотового,
 а если мы сделаем для второго параметра тоже typename другого типа (Т2)
 то тогда сможем
+
+и второй вариант, это поиск чере метод find
 */
 bool easyFind(T array, int value)
 // bool easyFind(T array, T2 value)
+
 {
     for(typename T::iterator i = array.begin(); i != array.end(); ++i)
     {
@@ -62,6 +65,11 @@ bool easyFind(T array, int value)
     }
     // throw NotFind();
     return(false);
+
+    // typename T::iterator second_var = std::find(array.begin(), array.end(), value);
+    // if(second_var == array.end())
+    //     return(false);
+    // return true;
 }
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: eshakita <eshakita@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 11:11:45 by eshakita          #+#    #+#             */
-/*   Updated: 2021/10/20 10:00:18 by eshakita         ###   ########.fr       */
+/*   Updated: 2021/10/22 16:18:43 by eshakita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ public:
     {
         if(new_Array.array != nullptr && new_Array.array_size > 0)
         {
-            if(flag)
+            if(flag) //!!! я чекаю не тот флаг!!!! нужно new_Array->flag !!!!!!!!!!
             {
                 this->array_size = new_Array.array_size;
                 array = new T[array_size];

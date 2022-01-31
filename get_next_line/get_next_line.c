@@ -12,23 +12,23 @@
 
 #include "get_next_line.h"
 
-static char			*check_ostatok(char *ostatok, char **line)
+static char			*check_reminder(char *reminder, char **line)
 {
 	char			*place_n;
 
 	place_n = NULL;
-	if (ostatok)
+	if (reminder)
 	{
-		if ((place_n = ft_strchr(ostatok, '\n')))
+		if ((place_n = ft_strchr(reminder, '\n')))
 		{
 			*place_n = '\0';
-			*line = ft_strdup(ostatok);
+			*line = ft_strdup(reminder);
 			place_n++;
-			ft_strcpy(ostatok, place_n);
+			ft_strcpy(reminder, place_n);
 		}
 		else
 		{
-			*line = ft_strdup(ostatok);
+			*line = ft_strdup(reminder);
 		}
 	}
 	else
@@ -49,12 +49,12 @@ static int			ft_clear_and_line(char *baffer, char **line)
 	return (1);
 }
 
-static int			ft_ost(char *place_n, int kol_vo_read_byte, char **ostatok)
+static int			ft_ost(char *place_n, int byte, char **reminder)
 {
-	if (!place_n && !kol_vo_read_byte)
+	if (!place_n && !byte)
 	{
-		free(*ostatok);
-		*ostatok = NULL;
+		free(*reminder);
+		*reminder = NULL;
 		return (0);
 	}
 	return (1);
@@ -62,30 +62,30 @@ static int			ft_ost(char *place_n, int kol_vo_read_byte, char **ostatok)
 
 static int			ft_gnl(int fd, char **line, char *baffer, char *place_n)
 {
-	int				kol_vo_read_byte;
-	static char		*ostatok;
+	int				byte;
+	static char		*reminder;
 
 	if (fd < 0 || !line || BUFFER_SIZE <= 0 || read(fd, baffer, 0) == -1
 	|| (!(baffer = (char *)malloc(BUFFER_SIZE + 1))))
 		return (-1);
-	place_n = check_ostatok(ostatok, line);
+	place_n = check_reminder(reminder, line);
 	if (!line)
 		return (-1);
-	while (!place_n && (kol_vo_read_byte = read(fd, baffer, BUFFER_SIZE)))
+	while (!place_n && (byte = read(fd, baffer, BUFFER_SIZE)))
 	{
-		baffer[kol_vo_read_byte] = '\0';
+		baffer[byte] = '\0';
 		if ((place_n = ft_strchr(baffer, '\n')))
 		{
-			free(ostatok);
+			free(reminder);
 			*place_n = '\0';
-			if (!(ostatok = ft_strdup(++place_n)))
+			if (!(reminder = ft_strdup(++place_n)))
 				return (-1);
 		}
 		if (!(ft_clear_and_line(baffer, line)))
 			return (-1);
 	}
 	free(baffer);
-	return (ft_ost(place_n, kol_vo_read_byte, &ostatok));
+	return (ft_ost(place_n, byte, &reminder));
 }
 
 int					get_next_line(int fd, char **line)
